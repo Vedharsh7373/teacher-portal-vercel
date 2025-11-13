@@ -1,6 +1,11 @@
 {
   "buildCommand": "npm install",
   "outputDirectory": "public",
+  "framework": "other"
+}
+Fix vercel.json: remove API rewrites so all api/*.js routes are direct serverless endpoints{
+  "buildCommand": "npm install",
+  "outputDirectory": "public",
   "framework": "other",
   "rewrites": [
     {
