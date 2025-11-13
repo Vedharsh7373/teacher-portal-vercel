@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Entry Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-section" id="authSection">
+            <div class="login-box">
+                <div class="logo">T</div>
+                <h1>Teacher Portal</h1>
+                <p>Enter your credentials</p>
+                <form id="loginForm">
+                    <label>Teacher ID:</label>
+                    <input type="text" id="teacherId" required>
+                    <label>PIN:</label>
+                    <input type="password" id="pin" required>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+                <div id="errorMsg" class="error-message"></div>
+            </div>
+        </div>
+        <div class="portal-section" id="portalSection" style="display:none;">
+            <div class="header">
+                <h2>Welcome, <span id="teacherName"></span></h2>
+                <button class="btn-logout" onclick="logout()">Logout</button>
+            </div>
+            <div class="content">
+                <div class="section">
+                    <h3>Your Students</h3>
+                    <div id="studentsList" class="students-list"></div>
+                </div>
+                <div class="section">
+                    <h3>Submit Work Entry</h3>
+                    <form id="submitForm">
+                        <label>Student:</label>
+                        <select id="studentSelect" required></select>
+                        <label>Work Type:</label>
+                        <select id="workType" required>
+                            <option>Homework</option>
+                            <option>Test</option>
+                            <option>Project</option>
+                            <option>Assignment</option>
+                        </select>
+                        <label>Marks:</label>
+                        <input type="number" id="marks" min="0" max="100" required>
+                        <button type="submit" class="btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
